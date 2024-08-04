@@ -4,7 +4,15 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 1000; //Change the port to 1000 from 8000
+
+app.use(
+  cors({
+    origin: ["https://blog-app.vercel.app"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 // MongoDB Connection
 mongoose.connect(

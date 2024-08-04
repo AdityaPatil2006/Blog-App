@@ -15,7 +15,7 @@ import { Add as AddIcon } from "@mui/icons-material";
 import axios from "axios";
 import "./App.css"; // Import CSS file
 
-const apiUrl = "http://localhost:8000";
+const apiUrl = "http://localhost:1000"; //Change the port to 1000 from 8000
 
 function App() {
   const [posts, setPosts] = useState([]);
